@@ -1,0 +1,56 @@
+{
+    "name": "@ikratkiy/ikratkiy-react-starter",
+    "version": "1.0.0",
+    "author": "Ivan Bryukhov <ivan.bryukhov@gmail.com>",
+    "repository": "https://github.com/ikratkiy/ikratkiy-react-starter",
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "src",
+        ".editorconfig",
+        ".env",
+        ".gitignore",
+        ".prettierignore",
+        ".prettierrc",
+        "LICENSE",
+        "package.json",
+        "tsconfig.json"
+    ],
+    "scripts": {
+        "build": "tsc --build --verbose && parcel build src/index.html",
+        "clean": "shx mkdir -p .parcel-cache dist lib && shx rm -rf .parcel-cache dist lib",
+        "lint": "prettier --check 'src/{*,**/*}.{ts,tsx,js,jsx,json}' && eslint",
+        "start": "yarn clean && parcel src/index.html --port 528"
+    },
+    "dependencies": {
+        "mobx": "^6.7.0",
+        "mobx-react-lite": "^3.4.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-hook-form": "^7.42.1",
+        "react-router-dom": "^6.7.0",
+        "styled-components": "^5.3.6",
+        "ts-node": "^10.9.1"
+    },
+    "devDependencies": {
+        "@types/eslint-plugin-prettier": "^3.1.0",
+        "@types/node": "^18.11.18",
+        "@types/prettier": "^2.7.2",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@types/styled-components": "^5.1.26",
+        "@typescript-eslint/eslint-plugin": "^5.49.0",
+        "eslint": "^8.32.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "parcel": "^2.3.2",
+        "prettier": "2.8.3",
+        "process": "^0.11.10",
+        "shx": "^0.3.4",
+        "typescript": "~4.7.4"
+    }
+}
