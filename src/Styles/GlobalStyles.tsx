@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         --text: #444;
 
         @media (prefers-color-scheme: dark) {
-            --background: #141414;
+            --background: #2d2c33;
             --text: #eee;
         }
     }
